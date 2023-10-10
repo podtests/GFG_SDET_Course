@@ -52,7 +52,7 @@ public class SeleniumDemoTest{
         //explicit wait
         WebDriverWait wait;
         wait = new WebDriverWait(wd, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
 
         //fluent wait:
         Wait fluentWait;
@@ -61,7 +61,7 @@ public class SeleniumDemoTest{
                 .pollingEvery(Duration.ofSeconds(5))
                 .ignoring(NoSuchElementException.class);
 
-        fluentWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        fluentWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
 
 
         //webdriver methods:

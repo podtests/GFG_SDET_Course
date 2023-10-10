@@ -5,11 +5,8 @@ import org.testng.annotations.*;
 
 public class LoginTest {
 
-
-
-
     WebDriver wd ;
-    @BeforeSuite
+    @BeforeSuite(alwaysRun=true)
     public void method1() {
         System.out.println("Before Suite");
     }
@@ -59,15 +56,15 @@ public class LoginTest {
         System.out.println("After Group");
     }
 
-    @Test(groups = {"Sanity", "Regression"})
+    @Parameters({"browserName"})
+    @Test(groups = {"Sanity", "Regression"}, priority=3)
     public void loginSuccess(String browserName) {
         System.out.println("Test1");
         ManageDrivers.getDriver("sdhagsdh");
 
-
     }
 
-    @Test(groups = { "Regression"})
+    @Test(groups = { "Regression"}, priority=1)
     public void Test2() {
         System.out.println("Test2");
 

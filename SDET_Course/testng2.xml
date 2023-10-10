@@ -5,15 +5,11 @@
     <test name="First Test ">
         <groups>
             <run>
-                <include name="Regression"></include>
+                <include name="windows"></include>
             </run>
         </groups>
         <classes>
-            <!--class name="in.gfg.Login2Test"/-->
-            <class name="in.gfg.LoginTest"/>
+            <class name="in.gfg.ElementDemoTest"/>
         </classes>
     </test>
-
-
-
 </suite>
