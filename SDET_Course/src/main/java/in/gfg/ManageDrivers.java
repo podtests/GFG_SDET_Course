@@ -43,7 +43,7 @@ public class ManageDrivers {
                 break;
             }
             default: {
-                wd = new ChromeDriver();
+                option = new ChromeOptions();
                 break;
             }
         }

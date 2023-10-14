@@ -3,13 +3,8 @@
 <suite name="First Test Suite">
     <parameter name="browserName" value="chrome"></parameter>
     <test name="First Test ">
-        <groups>
-            <run>
-                <include name="windows"></include>
-            </run>
-        </groups>
         <classes>
-            <class name="in.gfg.ElementDemoTest"/>
+            <class name="in.gfg.testcases.LoginTest"/>
         </classes>
     </test>
 </suite>
