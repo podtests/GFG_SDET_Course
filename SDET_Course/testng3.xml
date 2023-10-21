@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="First Test Suite" parallel="methods" thread-count="20">
+<suite name="First Test Suite">
     <parameter name="browserName" value="chrome"></parameter>
     <test name="First Test ">
-        <classes>
-            <class name="in.gfg.testcases.LoginTest"/>
-        </classes>
-    </test>
-    <test name="Second Test">
+        <groups>
+            <run>
+                <include name="iframeGroup"></include>
+            </run>
+        </groups>
         <classes>
             <class name="in.gfg.ElementDemoTest"/>
-            <class name="in.gfg.Login2Test"/>
         </classes>
     </test>
 </suite>

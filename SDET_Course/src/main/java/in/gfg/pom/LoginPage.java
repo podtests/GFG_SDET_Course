@@ -8,17 +8,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class LoginPage {
 
     WebDriver wd ;
-    By emailInput = By.xpath("//input[@id='user-name']");
-    By passwordInput = By.xpath("//input[@id='password']");
+    By emailInput = By.xpath("//input[@name='email']");
+    By passwordInput = By.xpath("//input[@name='password']");
 
-    By loginButton = By.xpath("//input[@id='login-button']");
+    By loginButton = By.xpath("//button[@type='submit']");
 
     public LoginPage(WebDriver wd) {
         this.wd = wd;
     }
 
     public LoginPage get() {
-        this.wd.get("https://www.saucedemo.com/");
+        this.wd.get("https://demo.evershop.io/account/login");
         return this;
     }
 

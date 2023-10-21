@@ -27,7 +27,7 @@ public class ElementDemoTest {
     By password = By.id("password");
 
     @Parameters({"browserName"})
-    @BeforeClass(groups={"windows"})
+    @BeforeClass(groups={"windows", "iframeGroup"})
     public void setWebDriver(String browser) {
         //wd = ManageDrivers.getDriver(browser);
         wd = ManageDrivers.getRemoteDriver(browser);
@@ -145,6 +145,27 @@ public class ElementDemoTest {
 
 
     }
+
+    @Test(groups={"iframeGroup"})
+    public void frameTest() {
+
+        wd.get("https://selectorshub.com/iframe-scenario/");
+        //wd.findElement(By.cssSelector("#inp_val")).sendKeys("Akhil");
+
+        //switching to frames
+        WebElement frameElement = wd.findElement(By.cssSelector("#pact1"));
+        wd.switchTo().frame(frameElement);
+
+        wd.findElement(By.cssSelector("#inp_val")).sendKeys("Akhil");
+
+        //
+        wd.switchTo().parentFrame();
+
+
+
+    }
+
+
 
     @AfterSuite
     public void cleanTestSuite() {
